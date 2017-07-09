@@ -10,7 +10,7 @@ language: java
 jdk:
   - oraclejdk8		
   - openjdk8		
-  - openjdk7
+  - oraclejdk7
 dist: trusty
 sudo: required
 services:
@@ -33,7 +33,7 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
-    jdk: openjdk7
+    jdk: oraclejdk7
 before_deploy: "./gradlew assembleMainDist"
 addons:
   hostname: travis-ci
